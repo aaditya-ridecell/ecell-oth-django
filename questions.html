@@ -1,94 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>E-Cell | Online Treasure Hunt</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <title>E-Cell | Online Treasure Hunt</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <body class="img js-fullheight" style="background-image: url(images/bg.jpg)">
-    <header>
-      <nav
-        class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
-      >
-        <a class="navbar-brand" href="#">
-          <img
-            src="images/logo.png"
-            alt=""
-            width="150"
-            height="84"
-            class="d-inline-block align-text-top"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="https://discord.com/invite/7rHDZC64zW"
-                ><button class="btn btn-outline-info mx-3" type="button">
-                  Discord
-                </button></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://hackathon.ecelliiitp.org/Tresure-hunt-rulebook.pdf"
-                ><button class="btn btn-outline-light mx-3" type="button">
-                  Rules
-                </button></a
-              >
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-outline-warning mx-3" type="button">
-                Leaderboard
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-outline-primary mx-3" type="button">
-                Question
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-outline-danger mx-3" type="button">
-                Sign out
-              </button>
-            </li>
-          </ul>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="img js-fullheight" style="background-image: url(images/bg.jpg)">
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="" width="150" height="84" class="d-inline-block align-text-top" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="https://discord.com/invite/7rHDZC64zW"><button class="btn btn-outline-info mx-3" type="button">
+                Discord
+              </button></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://hackathon.ecelliiitp.org/Tresure-hunt-rulebook.pdf"><button
+                class="btn btn-outline-light mx-3" type="button">
+                Rules
+              </button></a>
+          </li>
+          <li class="nav-item">
+            <a href = "leaderboard.html">
+            <button class="btn btn-outline-warning mx-3" type="button">
+              Leaderboard
+            </button></a>
+          </li>
+          <li class="nav-item">
+            <a href = "questions.html">
+            <button class="btn btn-outline-primary mx-3" type="button">
+              Question
+            </button></a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-danger mx-3" type="button">
+              Sign out
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="view intro hm-purple-light" style="height: 25px"></div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section">Question</h2>
         </div>
-      </nav>
-    </header>
-    <section class="ftco-section">
-      <div class="container"></div>
-    </section>
+      </div>
+      <div class="row justify-content-center">
+        <img id="myImg" src="images/4.jpg" alt="xxx" style="width:100%;max-width:600px">
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+        </div>
+      </div>
+      <br>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="login-wrap p-0">
+            <form action="#" class="signin-form">
+              <div class="row">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Answer" required />
+                </div>
+                <div class="form-group mx-3">
+                  <button type="submit" class="form-control btn btn-success submit px-3">
+                    Submit
+                  </button>
+                </div>
+              </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/modal.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
