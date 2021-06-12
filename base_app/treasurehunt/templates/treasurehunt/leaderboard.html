@@ -1,0 +1,71 @@
+{% extends "treasurehunt/base.html" %} {% block content %} {% load static %}
+
+<!-- <div class="container leader" style="background: white">
+  <center>
+    <strong>
+      <h2>Leaderboard</h2>
+    </strong>
+  </center>
+  <center>
+    <h5>    
+      <table style="border: 2px solid black">
+        <tr>
+          <th style="border: 2px solid black; padding: 15px">Email</th>
+          <th style="border: 2px solid black; padding: 15px">Score</th>
+          <th style="border: 2px solid black; padding: 15px">
+            Last Answer Submitted
+          </th>
+        </tr>
+        {% for x,y,z in user_name %}
+        <tr>
+          <td
+            style="border: 2px solid black; text-align: center; padding: 15px"
+          >
+            {{x}}
+          </td>
+          <td
+            style="border: 2px solid black; text-align: center; padding: 15px"
+          >
+            {{y}}
+          </td>
+          <td
+            style="border: 2px solid black; text-align: center; padding: 15px"
+          >
+            {{z}}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </h5>
+  </center>
+</div> -->
+
+<div class="container">
+  <div class="view intro hm-purple-light" style="height: 25px"></div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center mb-5">
+      <h2 class="heading-section">Current Leaderboard</h2>
+    </div>
+  </div>
+  <table class="table table-dark table-bordered table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Email</th>
+        <th scope="col">Score</th>
+        <th scope="col">Last Submitted</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for x,y,z in user_name %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{x}}</td>
+        <td>{{y}}</td>
+        <td>{{z}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}
