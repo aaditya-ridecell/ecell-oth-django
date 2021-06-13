@@ -75,16 +75,15 @@ def user_logout(request):
 @login_required
 def question(request):
 
-    question_fixed = [
-        "4LcGlbjua3",
-    ]
+    question_fixed = ["1", "2", "3"]
 
     current_user = request.user
     sc = models.Score.objects.get(user__exact=current_user)
-    if sc.score == 1:
-        return render(request, "treasurehunt/end.html")
+    print(sc.score)
+    if sc.score == 3:
+        return render(request, "treasurehunt/congrats.html")
     else:
-        if request.method == "POST" and sc.score != 1:
+        if request.method == "POST" and sc.score != 3:
             ans_fixed = models.AnswerChecker.objects.get(index__exact=sc.score)
             question_form = forms.Answer(data=request.POST)
             if question_form.is_valid():
@@ -114,8 +113,8 @@ def question(request):
                         "question_fixed": question_fixed[sc.score],
                     },
                 )
-        elif sc.score == 1:
-            return render(request, "treasurehunt/end.html")
+        if sc.score == 3:
+            return render(request, "treasurehunt/congrats.html")
         else:
             question_form = forms.Answer()
         return render(
